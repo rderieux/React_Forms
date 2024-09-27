@@ -20,6 +20,7 @@ export default function SignUpForm({ setToken }) {
       const result = await response.json();
       console.log(result);
       setToken(result.token);
+      setError(null);
     } catch (error) {
       console.error(error);
     }
@@ -36,6 +37,7 @@ export default function SignUpForm({ setToken }) {
             type="text"
             name="username"
             value={username}
+            placeholder="type your username..."
             onChange={(event) => setUsername(event.target.value)}
           />
         </label>
@@ -45,6 +47,7 @@ export default function SignUpForm({ setToken }) {
             type="text"
             name="username"
             value={password}
+            placeholder="type your password..."
             onChange={(event) => setPassword(event.target.value)}
           />
         </label>

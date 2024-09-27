@@ -4,6 +4,7 @@ export default function Authenticate({ token }) {
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
   const [dataUser, setDataUser] = useState([]);
+
   async function handleClick() {
     event.preventDefault();
     console.log("Submitted");
@@ -22,6 +23,7 @@ export default function Authenticate({ token }) {
       console.log(result.data);
       setSuccessMessage(result.message);
       setDataUser(result.data.iat);
+      setError(null);
     } catch (error) {
       console.error(error);
       setError(error.message);
