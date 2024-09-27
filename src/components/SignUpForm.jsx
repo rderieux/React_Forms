@@ -17,10 +17,7 @@ export default function SignUpForm() {
           Password:
           <input type="text" name="username" />
         </label>
-        <label>
-          Error:
-          <input type="text" name="username" />
-        </label>
+        <button>Submit</button>
       </form>
     </>
   );
